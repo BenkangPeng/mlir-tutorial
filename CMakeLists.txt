@@ -28,7 +28,7 @@ message(STATUS "Fetching or-tools...")
 include(FetchContent)
 FetchContent_Declare(
   or-tools
-  GIT_REPOSITORY https://github.com/google/or-tools.git
+  GIT_REPOSITORY https://gitee.com/tooqiu/or-tools.git #cannot connect https://github.com/google/or-tools.git
   GIT_TAG        v9.0
 )
 FetchContent_MakeAvailable(or-tools)
