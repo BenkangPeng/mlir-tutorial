@@ -1,9 +1,9 @@
-#include "lib/Conversion/PolyToStandard/PolyToStandard.h"
-#include "lib/Dialect/Noisy/NoisyDialect.h"
-#include "lib/Dialect/Poly/PolyDialect.h"
-#include "lib/Transform/Affine/Passes.h"
-#include "lib/Transform/Arith/Passes.h"
-#include "lib/Transform/Noisy/Passes.h"
+#include "PolyToStandard.h"
+#include "NoisyDialect.h"
+#include "PolyDialect.h"
+#include "Passes.h"
+#include "Passes.h"
+#include "Passes.h"
 #include "mlir/Conversion/ArithToLLVM/ArithToLLVM.h"
 #include "mlir/Conversion/ControlFlowToLLVM/ControlFlowToLLVM.h"
 #include "mlir/Conversion/FuncToLLVM/ConvertFuncToLLVMPass.h"
@@ -64,8 +64,8 @@ int main(int argc, char **argv) {
   mlir::registerAllPasses();
 
   mlir::tutorial::registerAffinePasses();
-  mlir::tutorial::registerArithPasses();
-  mlir::tutorial::noisy::registerNoisyPasses();
+  // mlir::tutorial::registerArithPasses();
+  // mlir::tutorial::noisy::registerNoisyPasses();
 
   // Dialect conversion passes
   mlir::tutorial::poly::registerPolyToStandardPasses();

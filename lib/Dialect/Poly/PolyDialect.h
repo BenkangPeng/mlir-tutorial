@@ -5,6 +5,6 @@
 // have any includes.
 #include "mlir/IR/DialectImplementation.h"
 
-#include "lib/Dialect/Poly/PolyDialect.h.inc"
+#include "PolyDialect.h.inc"
 
 #endif  // LIB_DIALECT_POLY_POLYDIALECT_H_

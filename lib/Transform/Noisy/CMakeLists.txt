@@ -1,8 +1,16 @@
+include_directories(${PROJECT_SOURCE_DIR}/lib/Transform/Noisy)
+include_directories(${PROJECT_BINARY_DIR}/lib/Transform/Noisy)
+include_directories(${PROJECT_SOURCE_DIR}/lib/Analysis/ReduceNoiseAnalysis)
+include_directories(${PROJECT_BINARY_DIR}/lib/Analysis/ReduceNoiseAnalysis)
+include_directories(${PROJECT_SOURCE_DIR}/lib/Dialect/Noisy)
+include_directories(${PROJECT_BINARY_DIR}/lib/Dialect/Noisy)
 add_mlir_library(NoisyPasses
     ReduceNoiseOptimizer.cpp
 
-    ${PROJECT_SOURCE_DIR}/lib/Transform/Noisy/
+
     ADDITIONAL_HEADER_DIRS
+    ${PROJECT_SOURCE_DIR}/lib/Transform/Noisy/
+    ${PROJECT_BINARY_DIR}/lib/Transform/Noisy/
 
     DEPENDS
     MLIRNoisy

@@ -16,12 +16,15 @@ set(LLVM_TARGET_DEFINITIONS PolyPatterns.td)
 mlir_tablegen(PolyCanonicalize.cpp.inc -gen-rewriters)
 add_public_tablegen_target(MLIRPolyCanonicalizationIncGen)
 
+include_directories(${PROJECT_SOURCE_DIR}/lib/Dialect/Poly)
+include_directories(${PROJECT_BINARY_DIR}/lib/Dialect/Poly)
 add_mlir_dialect_library(MLIRPoly
     PolyDialect.cpp
     PolyOps.cpp
 
     ADDITIONAL_HEADER_DIRS
     ${PROJECT_SOURCE_DIR}/lib/Dialect/Poly
+    ${PROJECT_BINARY_DIR}/lib/Dialect/Poly
 
     LINK_LIBS PUBLIC
     )

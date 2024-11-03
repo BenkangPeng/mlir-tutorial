@@ -1,8 +1,16 @@
+include_directories(${PROJECT_SOURCE_DIR}/lib/Conversion/PolyToStandard/)
+include_directories(${PROJECT_BINARY_DIR}/lib/Conversion/PolyToStandard/)
+include_directories(${PROJECT_SOURCE_DIR}/lib/Dialect/Poly/)
+include_directories(${PROJECT_BINARY_DIR}/lib/Dialect/Poly/)
 add_mlir_library(PolyToStandard
   PolyToStandard.cpp
 
-  ${PROJECT_SOURCE_DIR}/lib/Conversion/PolyToStandard/
+
   ADDITIONAL_HEADER_DIRS
+  ${PROJECT_SOURCE_DIR}/lib/Conversion/PolyToStandard/
+  ${PROJECT_BINARY_DIR}/lib/Conversion/PolyToStandard/
+  ${PROJECT_SOURCE_DIR}/lib/Dialect/Poly/
+  ${PROJECT_BINARY_DIR}/lib/Dialect/Poly/
 
   DEPENDS
   PolyToStandardPassIncGen

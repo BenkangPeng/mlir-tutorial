@@ -1,4 +1,4 @@
-#include "lib/Transform/Affine/AffineFullUnrollPatternRewrite.h"
+#include "AffineFullUnrollPatternRewrite.h"
 #include "mlir/Dialect/Affine/IR/AffineOps.h"
 #include "mlir/Dialect/Affine/LoopUtils.h"
 #include "mlir/IR/PatternMatch.h"
@@ -9,7 +9,7 @@ namespace mlir {
 namespace tutorial {
 
 #define GEN_PASS_DEF_AFFINEFULLUNROLLPATTERNREWRITE
-#include "lib/Transform/Affine/Passes.h.inc"
+#include "Passes.h.inc"
 
 using mlir::affine::AffineForOp;
 using mlir::affine::loopUnrollFull;

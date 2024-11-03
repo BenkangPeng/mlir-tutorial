@@ -15,8 +15,9 @@ def Polynomial : Poly_Type<"Polynomial", "poly"> {
   let description = [{
     A type for polynomials with integer coefficients in a single-variable polynomial ring.
   }];
+  //单变量多项式
 
-  let parameters = (ins "int":$degreeBound);
+  let parameters = (ins "int":$degreeBound);//输入参数是$degreeBound,类型是int，表示多项式的最高次数
   let assemblyFormat = "`<` $degreeBound `>`";
 }
 

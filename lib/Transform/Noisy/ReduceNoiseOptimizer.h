@@ -8,7 +8,7 @@ namespace tutorial {
 namespace noisy {
 
 #define GEN_PASS_DECL_REDUCENOISEOPTIMIZER
-#include "lib/Transform/Noisy/Passes.h.inc"
+#include "Passes.h.inc"
 
 }  // namespace noisy
 }  // namespace tutorial

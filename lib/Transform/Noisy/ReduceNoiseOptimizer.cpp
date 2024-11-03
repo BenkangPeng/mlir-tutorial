@@ -1,8 +1,8 @@
-#include "lib/Transform/Noisy/ReduceNoiseOptimizer.h"
+#include "ReduceNoiseOptimizer.h"
 
-#include "lib/Analysis/ReduceNoiseAnalysis/ReduceNoiseAnalysis.h"
-#include "lib/Dialect/Noisy/NoisyOps.h"
-#include "lib/Dialect/Noisy/NoisyTypes.h"
+#include "ReduceNoiseAnalysis.h"
+#include "NoisyOps.h"
+#include "NoisyTypes.h"
 #include "mlir/Analysis/DataFlow/DeadCodeAnalysis.h"
 #include "mlir/Analysis/DataFlow/IntegerRangeAnalysis.h"
 #include "mlir/Analysis/DataFlowFramework.h"
@@ -14,7 +14,7 @@ namespace tutorial {
 namespace noisy {
 
 #define GEN_PASS_DEF_REDUCENOISEOPTIMIZER
-#include "lib/Transform/Noisy/Passes.h.inc"
+#include "Passes.h.inc"
 
 struct ReduceNoiseOptimizer
     : impl::ReduceNoiseOptimizerBase<ReduceNoiseOptimizer> {

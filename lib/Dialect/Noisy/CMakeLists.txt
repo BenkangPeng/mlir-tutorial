@@ -11,6 +11,8 @@ add_public_tablegen_target(MLIRNoisyOpsIncGen)
 add_dependencies(mlir-headers MLIRNoisyOpsIncGen)
 
 add_mlir_doc(NoisyDialect NoisyDialect Noisy/ -gen-dialect-doc)
+include_directories(${PROJECT_BINARY_DIR}/lib/Dialect/Noisy)
+include_directories(${PROJECT_SOURCE_DIR}/lib/Dialect/Noisy)
 
 add_mlir_dialect_library(MLIRNoisy
     NoisyDialect.cpp
@@ -18,4 +20,5 @@ add_mlir_dialect_library(MLIRNoisy
 
     ADDITIONAL_HEADER_DIRS
     ${PROJECT_SOURCE_DIR}/lib/Dialect/Noisy
+    ${PROJECT_BINARY_DIR}/lib/Dialect/Noisy
     )

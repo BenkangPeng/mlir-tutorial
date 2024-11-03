@@ -1,15 +1,15 @@
-#include "lib/Dialect/Poly/PolyDialect.h"
+#include "PolyDialect.h"
 
-#include "lib/Dialect/Poly/PolyOps.h"
-#include "lib/Dialect/Poly/PolyTypes.h"
+#include "PolyOps.h"
+#include "PolyTypes.h"
 #include "mlir/IR/Builders.h"
 #include "llvm/ADT/TypeSwitch.h"
 
-#include "lib/Dialect/Poly/PolyDialect.cpp.inc"
+#include "PolyDialect.cpp.inc"
 #define GET_TYPEDEF_CLASSES
-#include "lib/Dialect/Poly/PolyTypes.cpp.inc"
+#include "PolyTypes.cpp.inc"
 #define GET_OP_CLASSES
-#include "lib/Dialect/Poly/PolyOps.cpp.inc"
+#include "PolyOps.cpp.inc"
 
 namespace mlir {
 namespace tutorial {
@@ -18,11 +18,11 @@ namespace poly {
 void PolyDialect::initialize() {
   addTypes<
 #define GET_TYPEDEF_LIST
-#include "lib/Dialect/Poly/PolyTypes.cpp.inc"
+#include "PolyTypes.cpp.inc"
       >();
   addOperations<
 #define GET_OP_LIST
-#include "lib/Dialect/Poly/PolyOps.cpp.inc"
+#include "PolyOps.cpp.inc"
       >();
 }
 
