@@ -53,6 +53,7 @@ system, they should not be hard to adapt for your environment.
 
 *Build LLVM/MLIR*
 Please refer to the official documentation of LLVM: https://llvm.org/docs/GettingStarted.html to build/install LLVM.
+LLVM 20.1.7 is used in this repository.
 
 
 ### Build and test
@@ -76,5 +77,5 @@ cmake --build .
 ```
 Run tests:
 ```bash
-
+ninja check-mlir-tutorial
 ```
