@@ -6,10 +6,7 @@ configure_lit_site_cfg(
 )
 
 set (MLIR_TUTORIAL_TEST_DEPENDS
-    FileCheck count not
-    mlir-opt
-    mlir-runner
-    # tutorial-opt
+    tutorial-opt
 )
 
 add_lit_testsuite(check-mlir-tutorial "Running the MLIR tutorial regression tests"
