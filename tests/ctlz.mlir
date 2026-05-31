@@ -1,5 +1,7 @@
 // RUN: mlir-opt %s --convert-math-to-funcs=convert-ctlz | FileCheck %s
 
+// `func` is a dialect and `func.func` is an operation in the `func` dialect.
+// `math` is a dialect and `math.ctlz` is an operation in the `math` dialect.
 func.func @main(%arg0: i32) {
   %0 = math.ctlz %arg0 : i32
   func.return

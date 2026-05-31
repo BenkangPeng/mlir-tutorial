@@ -93,7 +93,7 @@ struct MulToAdd : impl::MulToAddBase<MulToAdd> {
     mlir::RewritePatternSet patterns(&getContext());
     patterns.add<PowerOfTwoExpand>(&getContext());
     patterns.add<PeelFromMul>(&getContext());
-    (void)applyPatternsAndFoldGreedily(getOperation(), std::move(patterns));
+    (void)applyPatternsGreedily(getOperation(), std::move(patterns));
   }
 };
 
