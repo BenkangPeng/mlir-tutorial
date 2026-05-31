@@ -67,11 +67,12 @@ cd build/
 
 LLVM_BUILD_DIR=/path/to/your/llvm/build
 # If you install the LLVM to the specific path, the $LLVM_BUILD_DIR also should be replaced with 
-# the install path.
+# the install path. e.g., /usr/local/llvm-20.1.7
 cmake -G Ninja .. \
     -DLLVM_DIR="$LLVM_BUILD_DIR/lib/cmake/llvm" \
     -DMLIR_DIR="$LLVM_BUILD_DIR/lib/cmake/mlir" \
-    -DCMAKE_BUILD_TYPE=Debug
+    -DCMAKE_BUILD_TYPE=Debug \
+    -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 
 cmake --build .
 ```
