@@ -7,14 +7,9 @@ add_mlir_library(MulToAdd
     MulToAdd.cpp
     MulToAddPdll.cpp
 
-    ${PROJECT_SOURCE_DIR}/lib/Transform/Arith/
-    ADDITIONAL_HEADER_DIRS
-
     DEPENDS
     MLIRMulToAddPasses
     MulToAddPdllIncGen
-
-    LINK_LIBS PUBLIC
 )
 
 set(LLVM_TARGET_DEFINITIONS Passes.td)

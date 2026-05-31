@@ -1,9 +1,6 @@
 add_mlir_library(PolyToStandard
   PolyToStandard.cpp
 
-  ${PROJECT_SOURCE_DIR}/lib/Conversion/PolyToStandard/
-  ADDITIONAL_HEADER_DIRS
-
   DEPENDS
   PolyToStandardPassIncGen
 

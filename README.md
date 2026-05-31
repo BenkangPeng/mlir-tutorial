@@ -71,8 +71,7 @@ LLVM_BUILD_DIR=/path/to/your/llvm/build
 cmake -G Ninja .. \
     -DLLVM_DIR="$LLVM_BUILD_DIR/lib/cmake/llvm" \
     -DMLIR_DIR="$LLVM_BUILD_DIR/lib/cmake/mlir" \
-    -DCMAKE_BUILD_TYPE=Debug \
-    -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+    -DCMAKE_BUILD_TYPE=Debug
 
 cmake --build .
 ```
