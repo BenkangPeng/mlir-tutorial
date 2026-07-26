@@ -17,6 +17,8 @@ def Has32BitArguments : NativeOpTrait<"Has32BitArguments"> {
   let cppNamespace = "::mlir::tutorial::poly";
 }
 
+// Pure: [NoMemoryEffect, AlwaysSpeculatable]
+// AlwaysSpeculatable means that the operation can be speculatively executed without affecting the result(e.g., for loop invariant code motion).
 class Poly_BinOp<string mnemonic> : Op<Poly_Dialect, mnemonic, [Pure, ElementwiseMappable, SameOperandsAndResultType]> {
   let arguments = (ins PolyOrContainer:$lhs, PolyOrContainer:$rhs);
   let results = (outs PolyOrContainer:$output);
